@@ -4,8 +4,8 @@
   "description": " Namaste React",
   "scripts": {
     "test": "jest",
-    "start": "npx parcel index.html", 
-    "build-production" : "npx parcel build index.html"
+    "start": "npx parcel index.html",
+    "build-production": "npx parcel build index.html"
   },
   "keywords": [
     "React"
@@ -18,6 +18,10 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },"browsersList":["Last 2 version"]
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "browsersList": [
+    "Last 2 version"
+  ]
 }

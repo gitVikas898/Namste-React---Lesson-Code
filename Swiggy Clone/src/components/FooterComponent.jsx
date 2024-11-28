@@ -3,13 +3,13 @@ export const FooterComponent = () => {
     return (
       <div className="footer-container">
         <div className="footer-header">
-          <h1>For better experience,download the Myfood app now</h1>
+          <h1 className="foot-head">For better experience,download the Myfood app now</h1>
           <img
-            className="logo"
+            className="logo-f"
             src={GOOGLE_URL}
           ></img>
           <img
-            className="logo"
+            className="logo-f"
             src={APPLE_PLAY}
           ></img>
         </div>
@@ -17,7 +17,7 @@ export const FooterComponent = () => {
           <div className="cols">
             <img
               src={LOGO_URL}
-              className="logo"
+              className="logo-f"
             ></img>
             <p>©2024 Myfood limited</p>
           </div>

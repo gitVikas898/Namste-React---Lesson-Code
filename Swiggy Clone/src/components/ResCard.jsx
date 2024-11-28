@@ -19,10 +19,10 @@ export const ResCard = (props) => {
               className="rating"
             ></img>
             <p className="rating-text">{resData.avgRating}</p>
-            <p className="delivery">&#9679; {resData.sla.deliveryTime} mins</p>
+            <p className="delivery">&#9679; {resData?.sla?.deliveryTime ? `${resData.sla.deliveryTime} mins` : "Loading..."}</p>
           </div>
-          <p>{resData.cuisines.join(",")}</p>
-          <p>{resData.costForTwo} </p>
+            <p>{resData.cuisines.join(",")}</p>
+            <p>{resData.costForTwo} </p>
         </div>
       </div>
     );

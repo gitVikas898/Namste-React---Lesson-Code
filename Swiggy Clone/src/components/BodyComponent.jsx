@@ -1,12 +1,19 @@
-import  resList  from "../utils/MockData.js";
-import { ResCard } from "./ResCard.jsx";
 
+import { ResCard } from "./ResCard.jsx";
+import { Shimmer } from "./shimmer.jsx";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 export const BodyComponent = () => {
    
-  let [listOfRestaurant, setList] =  useState(resList);
+  let [listOfRestaurant, setList] =  useState([]);
+
+  let [searchText , setSearchText] = useState("");
+
+  let [filteredRestaurant , setFilteredRestaurant] = useState([]);
+
+  console.log("Body Rendered")
 
   useEffect(()=>{
     fetchData()
@@ -18,48 +25,46 @@ export const BodyComponent = () => {
 
    const response = await data.json();
    const restaurants = response?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-   const restaurantInfo = restaurants.map(restaurant => restaurant.info);
-    
-   setList(restaurantInfo)
+    const restaurantInfo = restaurants.map(restaurant => restaurant.info);
+   setList(restaurantInfo);
+   setFilteredRestaurant(restaurantInfo);
+   console.log(restaurantInfo);
   }
 
-    return (
+
+    return listOfRestaurant.length === 0 ?( <Shimmer></Shimmer> ):(
       <div className="body-container">
         <div className="search">
-          <input type="text" className="search-input" id="s-input"></input>
+          <input type="text" className="search-input" id="s-input" value={searchText} onChange={(e)=>{
+            setSearchText(e.target.value);
+          }}></input>
           <button className="btn" onClick={()=>{
-            const find = document.getElementById("s-input").value;
-            console.log(find)
-            const searcResult = listOfRestaurant.filter((res)=> res.cuisines.includes(find));
-            setList(searcResult);
+            const searcResult = listOfRestaurant.filter((res)=> res.name.includes(searchText));
+           setFilteredRestaurant(searcResult);
           }}>Search</button>
         </div>
         <div className="filter">
             <button className="filter-btn" onClick={()=>{
-             const filteredList = listOfRestaurant.filter((res) => res.avgRating>4);
-              setList(filteredList);
+             const filteredList = listOfRestaurant.filter((res) => res.avgRating>4.5);
+              setFilteredRestaurant(filteredList)
             }}>Filter Top Rated </button>
 
             <button className="veg-btn" onClick={()=>{
               const vegItems = listOfRestaurant.filter((res)=>res.veg)
-              setList(vegItems);
+              setFilteredRestaurant(vegItems)
             }}>Veg</button>
 
             <button className="delivery-btn" onClick={()=>{
-                const quickItems = listOfRestaurant.filter((res)=>res.deliveryTime<20);
-                setList(quickItems);
+                const quickItems = listOfRestaurant.filter((res)=>res?.sla?.deliveryTime <=30);
+              setFilteredRestaurant(quickItems)
             }}>Near me</button>
 
-            <button className="less" onClick={()=>{
-              const less200 = listOfRestaurant.filter((res)=>res.cost<=200)
-              setList(less200);
-            }}>
-              Less than ₹200
-            </button>
         </div>
         <div className="res-container">
-          {listOfRestaurant.map((restaurant) => (
-            <ResCard resData={restaurant} key={restaurant.id} />
+          {filteredRestaurant.map((restaurant) => (
+            <Link key={restaurant.id} to={"/restaurants/"+restaurant.id} className="res-text">
+              <ResCard resData={restaurant} />
+            </Link>
           ))}
         </div>
       </div>
