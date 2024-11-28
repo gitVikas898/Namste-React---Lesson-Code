@@ -1,36 +1,41 @@
-
+import { useState,useEffect } from "react";
 import { ResCard } from "./ResCard.jsx";
 import { Shimmer } from "./shimmer.jsx";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { MAIN_RESTAURANTS_API } from "../utils/constants.js";
+import { useOnlineStatus } from "../utils/useOnlineStatus.js";
 
 export const BodyComponent = () => {
    
   let [listOfRestaurant, setList] =  useState([]);
+  let [filteredRestaurant , setFilteredRestaurant] = useState([]);
+
+  useEffect(()=>{
+      fetchData();
+  },[])
+
+  const fetchData = async()=>{
+      const data = await fetch(MAIN_RESTAURANTS_API);
+
+      const response = await data.json();
+
+      const restaurants = response?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+      const restaurantInfo = restaurants.map(restaurant => restaurant.info);
+      setList(restaurantInfo);
+      setFilteredRestaurant(restaurantInfo);
+  }
 
   let [searchText , setSearchText] = useState("");
 
-  let [filteredRestaurant , setFilteredRestaurant] = useState([]);
+  const status = useOnlineStatus();
 
-  console.log("Body Rendered")
-
-  useEffect(()=>{
-    fetchData()
-  },[])
-
-
-  const fetchData = async()=>{
-   const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.798113&lng=86.25776049999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-
-   const response = await data.json();
-   const restaurants = response?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-    const restaurantInfo = restaurants.map(restaurant => restaurant.info);
-   setList(restaurantInfo);
-   setFilteredRestaurant(restaurantInfo);
-   console.log(restaurantInfo);
-  }
-
+  if(status===false) return (
+    <div>
+      <h1>Looks Like You are Not Connected to the Internet, Please Check your connection!</h1>
+    </div>
+  )
+  
+  
 
     return listOfRestaurant.length === 0 ?( <Shimmer></Shimmer> ):(
       <div className="body-container">
@@ -60,6 +65,8 @@ export const BodyComponent = () => {
             }}>Near me</button>
 
         </div>
+
+
         <div className="res-container">
           {filteredRestaurant.map((restaurant) => (
             <Link key={restaurant.id} to={"/restaurants/"+restaurant.id} className="res-text">

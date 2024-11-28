@@ -1,9 +1,11 @@
 import { UserClass } from "./UserClass.jsx"
 
-export const About = () =>{
+ const About = () =>{
     return (
         <div>
             <UserClass></UserClass>
         </div>
     )
 }
+
+export default About
