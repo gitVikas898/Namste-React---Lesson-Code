@@ -17,8 +17,6 @@ const About =  lazy(()=> import("./components/About.jsx"))
 
 const AppLayout = () => {
 
-
-
   return (
     <div className="app">
       <Header></Header>

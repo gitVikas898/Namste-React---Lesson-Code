@@ -38,36 +38,45 @@ export const BodyComponent = () => {
   
 
     return listOfRestaurant.length === 0 ?( <Shimmer></Shimmer> ):(
-      <div className="body-container">
-        <div className="search">
-          <input type="text" className="search-input" id="s-input" value={searchText} onChange={(e)=>{
+      <div className=" p-4  grid gap-6">
+
+        <div className=" p-2 flex justify-around">
+          
+        <div className="flex items-center gap-3">
+            <button className="bg-orange-400 px-3 py-3 text-white rounded-md" onClick={()=>{
+             const filteredList = listOfRestaurant.filter((res) => res.avgRating>4);
+              setFilteredRestaurant(filteredList)
+            }}>Top Rated </button>
+
+            <button className="bg-green-600 p-3 rounded-md text-white" onClick={()=>{
+              const vegItems = listOfRestaurant.filter((res)=>res.veg)
+              setFilteredRestaurant(vegItems)
+            }}>Veg Only</button>
+
+            <button className="bg-blue-400 p-3 rounded-md text-white" onClick={()=>{
+                const quickItems = listOfRestaurant.filter((res)=>res?.sla?.deliveryTime <=30);
+              setFilteredRestaurant(quickItems)
+            }}>Near Me</button>
+
+        </div>
+          
+          
+        <div className="flex w-1/2">
+          
+          <input type="text" className="border-gray-300 flex-1 border border-solid w-full rounded-l-full outline-none px-6 text-gray-500" id="s-input" value={searchText} onChange={(e)=>{
             setSearchText(e.target.value);
           }}></input>
-          <button className="btn" onClick={()=>{
+          <button className="bg-orange-500 p-4 text-white rounded-r-full" onClick={()=>{
             const searcResult = listOfRestaurant.filter((res)=> res.name.includes(searchText));
            setFilteredRestaurant(searcResult);
           }}>Search</button>
         </div>
-        <div className="filter">
-            <button className="filter-btn" onClick={()=>{
-             const filteredList = listOfRestaurant.filter((res) => res.avgRating>4.5);
-              setFilteredRestaurant(filteredList)
-            }}>Filter Top Rated </button>
-
-            <button className="veg-btn" onClick={()=>{
-              const vegItems = listOfRestaurant.filter((res)=>res.veg)
-              setFilteredRestaurant(vegItems)
-            }}>Veg</button>
-
-            <button className="delivery-btn" onClick={()=>{
-                const quickItems = listOfRestaurant.filter((res)=>res?.sla?.deliveryTime <=30);
-              setFilteredRestaurant(quickItems)
-            }}>Near me</button>
 
         </div>
+       
 
 
-        <div className="res-container">
+        <div className="p-4  grid grid-cols-4 gap-4">
           {filteredRestaurant.map((restaurant) => (
             <Link key={restaurant.id} to={"/restaurants/"+restaurant.id} className="res-text">
               <ResCard resData={restaurant} />

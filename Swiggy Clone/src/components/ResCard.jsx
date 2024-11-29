@@ -2,26 +2,25 @@ import { CDN_URL, RATING_URL } from "../utils/constants.js";
 export const ResCard = (props) => {
     const { resData } = props;
     return (
-      <div className="res-card">
-        <div className="image-container">
+      <div id="card" className=" rounded-md p-4  h-96 flex flex-col justify-between hover:scale-105 transition-transform ease-in duration-300  ">
+        
+        <div className=" rounded-md  h-52 flex">
           <img
-            className="res-image"
+            className="w-full object-cover rounded-md"
             src={
               CDN_URL+resData.cloudinaryImageId
             }
           ></img>
         </div>
-        <div className="name-container">
-          <h3 className="name">{resData.name}</h3>
-          <div className="info">
-            <img
-              src={RATING_URL}
-              className="rating"
-            ></img>
-            <p className="rating-text">{resData.avgRating}</p>
-            <p className="delivery">&#9679; {resData?.sla?.deliveryTime ? `${resData.sla.deliveryTime} mins` : "Loading..."}</p>
+
+        <div id="info" className="flex flex-col gap-2 text-gray-600">
+          <h3 className="font-bold text-slate-950">{resData.name}</h3>
+          <div className="flex gap-1">
+            <img src={RATING_URL}className="w-6"></img>
+            <span className="">{resData.avgRating}</span>
+            <span className="">&#9679; {resData?.sla?.deliveryTime ? `${resData.sla.deliveryTime} mins` : "Loading..."}</span>
           </div>
-            <p>{resData.cuisines.join(",")}</p>
+            <p className="truncate">{resData.cuisines.join(",")}</p>
             <p>{resData.costForTwo} </p>
         </div>
       </div>

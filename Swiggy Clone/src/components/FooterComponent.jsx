@@ -1,27 +1,28 @@
-import { GOOGLE_URL,APPLE_PLAY,LOGO_URL } from "../utils/constants.js";
+import { GOOGLE_URL,APPLE_PLAY } from "../utils/constants.js";
+import logo from "../utils/img/logo.png"
 export const FooterComponent = () => {
     return (
-      <div className="footer-container">
-        <div className="footer-header">
-          <h1 className="foot-head">For better experience,download the Myfood app now</h1>
+      <div className=" text-white grid gap-8 p-4  bg-blue-500">
+        <div className=" p-5 flex gap-2 items-center justify-center ">
+          <h1 className="text-3xl font-bold">For better experience,download the Myfood app now</h1>
           <img
-            className="logo-f"
+            className="w-24"
             src={GOOGLE_URL}
           ></img>
           <img
-            className="logo-f"
+            className="w-24"
             src={APPLE_PLAY}
           ></img>
         </div>
-        <div className="footer-body">
-          <div className="cols">
+        <div className="text-white grid grid-cols-6 gap-5">
+          <div className=" p-4 flex flex-col items-center justify-center">
             <img
-              src={LOGO_URL}
-              className="logo-f"
+              src={logo}
+              className="w-24"
             ></img>
             <p>©2024 Myfood limited</p>
           </div>
-          <div className="cols">
+          <div className=" p-4 ">
             <h1>Company</h1>
             <ul>
               <li>About Us</li>
@@ -29,7 +30,7 @@ export const FooterComponent = () => {
               <li>Team</li>
             </ul>
           </div>
-          <div className="cols">
+          <div className=" p-4 ">
             <h1>Contact Us</h1>
             <ul>
               <li>Help & Support</li>
@@ -37,7 +38,7 @@ export const FooterComponent = () => {
               <li>Ride with us</li>
             </ul>
           </div>
-          <div className="cols">
+          <div className=" p-4 ">
             <h1>Legal</h1>
             <ul>
               <li>Cookie Policy</li>
@@ -45,7 +46,7 @@ export const FooterComponent = () => {
               <li>Investor Relations</li>
             </ul>
           </div>
-          <div className="cols">
+          <div className=" p-4 ">
             <h1>Available in:</h1>
             <ul>
               <li>Bangalore</li>
@@ -54,7 +55,7 @@ export const FooterComponent = () => {
             </ul>
           </div>
   
-          <div className="cols">
+          <div className=" p-4 ">
             <h1>Social Links</h1>
             <ul>
               <li>Linked In</li>
