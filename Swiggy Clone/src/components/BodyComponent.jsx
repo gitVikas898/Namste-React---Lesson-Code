@@ -43,17 +43,17 @@ export const BodyComponent = () => {
         <div className=" p-2 flex justify-around">
           
         <div className="flex items-center gap-3">
-            <button className="bg-orange-400 px-3 py-3 text-white rounded-md" onClick={()=>{
+            <button className="bg-orange-400 px-3 py-3 text-white rounded-md cursor-pointer" onClick={()=>{
              const filteredList = listOfRestaurant.filter((res) => res.avgRating>4);
               setFilteredRestaurant(filteredList)
             }}>Top Rated </button>
 
-            <button className="bg-green-600 p-3 rounded-md text-white" onClick={()=>{
+            <button className="bg-green-600 p-3 rounded-md text-white cursor-pointer" onClick={()=>{
               const vegItems = listOfRestaurant.filter((res)=>res.veg)
               setFilteredRestaurant(vegItems)
             }}>Veg Only</button>
 
-            <button className="bg-blue-400 p-3 rounded-md text-white" onClick={()=>{
+            <button className="bg-blue-400 p-3 rounded-md text-white cursor-pointer" onClick={()=>{
                 const quickItems = listOfRestaurant.filter((res)=>res?.sla?.deliveryTime <=30);
               setFilteredRestaurant(quickItems)
             }}>Near Me</button>

@@ -1,92 +1,43 @@
 export const Shimmer = () => {
   return (
-    <div className="shimmer-container">
+    <div className="grid grid-cols-4 gap-2 p-8">
+      <div className="h-96  grid gap-6 p-6">
+        <div className="h-52 bg-gray-100 w-full rounded-lg"></div>
+        <sapn className="px-8 bg-gray-100 w-1/2 rounded-full"></sapn>
+        <sapn className="px-8 bg-gray-100 w-1/2 rounded-full"></sapn>
+      </div>
 
-<div className="filter-container">
-            <button className="shimmer-button">ShimmerButton</button>
-            <button className="shimmer-button">ShimmerButton</button>
-            <button className="shimmer-button">ShimmerButton</button>
-        </div>
-<div className="shimmer">
-    
-          <div className="shimmer-card">
-            <div className="shimmer-box"></div>
-            <h1 className="shimmer-head">Shimmer Card</h1>
-            <p className="shimmer-head">rating</p>
-            <p className="shimmer-head">cuisines</p>
-          </div>
-    
-          <div className="shimmer-card">
-            <div className="shimmer-box"></div>
-            <h1 className="shimmer-head">Shimmer Card</h1>
-            <p className="shimmer-head">rating</p>
-            <p className="shimmer-head">cuisines</p>
-          </div>
-    
-          <div className="shimmer-card">
-            <div className="shimmer-box"></div>
-            <h1 className="shimmer-head">Shimmer Card</h1>
-            <p className="shimmer-head">rating</p>
-            <p className="shimmer-head">cuisines</p>
-          </div>
-          <div className="shimmer-card">
-            <div className="shimmer-box"></div>
-            <h1 className="shimmer-head">Shimmer Card</h1>
-            <p className="shimmer-head">rating</p>
-            <p className="shimmer-head">cuisines</p>
-          </div>
-    
-          <div className="shimmer-card">
-            <div className="shimmer-box"></div>
-            <h1 className="shimmer-head">Shimmer Card</h1>
-            <p className="shimmer-head">rating</p>
-            <p className="shimmer-head">cuisines</p>
-          </div>
-    
-          <div className="shimmer-card">
-            <div className="shimmer-box"></div>
-            <h1 className="shimmer-head">Shimmer Card</h1>
-            <p className="shimmer-head">rating</p>
-            <p className="shimmer-head">cuisines</p>
-          </div>
-</div>
+      <div className="h-96  grid gap-6 p-6">
+        <div className="h-52 bg-gray-100 w-full rounded-lg"></div>
+        <sapn className="px-8 bg-gray-100 w-1/2 rounded-full"></sapn>
+        <sapn className="px-8 bg-gray-100 w-1/2 rounded-full"></sapn>
+      </div>
 
+      <div className="h-96  grid gap-6 p-6">
+        <div className="h-52 bg-gray-100 w-full rounded-lg"></div>
+        <sapn className="px-8 bg-gray-100 w-1/2 rounded-full"></sapn>
+        <sapn className="px-8 bg-gray-100 w-1/2 rounded-full"></sapn>
+      </div>
+
+      <div className="h-96  grid gap-6 p-6">
+        <div className="h-52 bg-gray-100 w-full rounded-lg"></div>
+        <sapn className="px-8 bg-gray-100 w-1/2 rounded-full"></sapn>
+        <sapn className="px-8 bg-gray-100 w-1/2 rounded-full"></sapn>
+      </div>
     </div>
   );
 };
 
-export const ShimmerMenu = () =>{
-
-  return(<div className="main-container">
-      <div className="shimmer-info-menu">
-        <h2 className="shim-text">Shimmer Res Name</h2>
-        <p className="shim-text">Shimmer info</p>
+export const ShimmerMenu = () => {
+  return (
+    <div className="  p-4 w-full items-center justify-center flex gap-3 rounded-lg h-56 ">
+      <div className=" w-1/2 grid gap-2 p-2">
+        <span className="px-6 bg-gray-100 rounded-full"></span>
+        <span className="px-6 bg-gray-100 rounded-full"></span>
       </div>
+      <div className="flex rounded-lg w-56 h-48 bg-gray-100">
 
-      
-      <div className="shimmer-menu-item">
-        <div className="menu-shimmer">
-            <div>
-              <h2 className="shim-text">Menu Item Name</h2>
-              <p className="shim-text">info</p>
-            </div>
-
-            <div className="shim-img-box">
-
-            </div>
-        </div>
-        <div className="menu-shimmer">
-            <div>
-              <h2 className="shim-text">Menu Item Name</h2>
-              <p className="shim-text">info</p>
-            </div>
-
-            <div className="shim-img-box">
-
-            </div>
-        </div>
       </div>
-  </div>)
-
-  
-}
+    </div>
+  );
+};

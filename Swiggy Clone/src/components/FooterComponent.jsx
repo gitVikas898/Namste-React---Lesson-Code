@@ -2,7 +2,7 @@ import { GOOGLE_URL,APPLE_PLAY } from "../utils/constants.js";
 import logo from "../utils/img/logo.png"
 export const FooterComponent = () => {
     return (
-      <div className=" text-white grid gap-8 p-4  bg-blue-500">
+      <div className=" text-white grid gap-8 p-4  bg-blue-500 w-full">
         <div className=" p-5 flex gap-2 items-center justify-center ">
           <h1 className="text-3xl font-bold">For better experience,download the Myfood app now</h1>
           <img

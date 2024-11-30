@@ -2,7 +2,7 @@ import { UserClass } from "./UserClass.jsx"
 
  const About = () =>{
     return (
-        <div>
+        <div className="">
             <UserClass></UserClass>
         </div>
     )

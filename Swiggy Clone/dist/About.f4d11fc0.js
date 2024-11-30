@@ -619,6 +619,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _userClassJsx = require("./UserClass.jsx");
 const About = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userClassJsx.UserClass), {}, void 0, false, {
             fileName: "Swiggy Clone/src/components/About.jsx",
             lineNumber: 6,
@@ -653,6 +654,18 @@ parcelHelpers.export(exports, "UserClass", ()=>UserClass);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _htmlPng = require("../utils/img/html.png");
+var _htmlPngDefault = parcelHelpers.interopDefault(_htmlPng);
+var _cssPng = require("../utils/img/css.png");
+var _cssPngDefault = parcelHelpers.interopDefault(_cssPng);
+var _jsPng = require("../utils/img/js.png");
+var _jsPngDefault = parcelHelpers.interopDefault(_jsPng);
+var _reactPng = require("../utils/img/react.png");
+var _reactPngDefault = parcelHelpers.interopDefault(_reactPng);
+var _reduxPng = require("../utils/img/redux.png");
+var _reduxPngDefault = parcelHelpers.interopDefault(_reduxPng);
+var _gitPng = require("../utils/img/git.png");
+var _gitPngDefault = parcelHelpers.interopDefault(_gitPng);
 class UserClass extends (0, _reactDefault.default).Component {
     constructor(props){
         super(props);
@@ -674,61 +687,127 @@ class UserClass extends (0, _reactDefault.default).Component {
     render() {
         const { name, bio, twitter_username, avatar_url } = this.state.userInfo;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "user-card",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "user-info-box",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                            children: name
+            className: " p-3 flex flex-col gap-3 items-center  bg-orange-400 text-gray-700 ",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shadow-lg  p-4 flex flex-col gap-3 items-center justify-between rounded-md max-w-sm bg-white",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "border border-green-500 border-solid flex max-w-40 rounded-full",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: avatar_url,
+                            alt: "",
+                            className: "w-full rounded-full"
                         }, void 0, false, {
                             fileName: "Swiggy Clone/src/components/UserClass.jsx",
-                            lineNumber: 36,
-                            columnNumber: 23
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                            children: bio
-                        }, void 0, false, {
-                            fileName: "Swiggy Clone/src/components/UserClass.jsx",
-                            lineNumber: 37,
-                            columnNumber: 23
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                            children: [
-                                "Twitter:",
-                                twitter_username
-                            ]
-                        }, void 0, true, {
-                            fileName: "Swiggy Clone/src/components/UserClass.jsx",
-                            lineNumber: 38,
-                            columnNumber: 23
+                            lineNumber: 43,
+                            columnNumber: 21
                         }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "Swiggy Clone/src/components/UserClass.jsx",
-                    lineNumber: 35,
-                    columnNumber: 19
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "user-image-box",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        src: avatar_url,
-                        alt: "",
-                        className: "user-img"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/UserClass.jsx",
-                        lineNumber: 41,
-                        columnNumber: 21
+                        lineNumber: 42,
+                        columnNumber: 19
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "text-2xl font-semibold",
+                        children: name
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/UserClass.jsx",
+                        lineNumber: 45,
+                        columnNumber: 19
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: bio
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/UserClass.jsx",
+                        lineNumber: 46,
+                        columnNumber: 19
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: "Tech Stack"
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/UserClass.jsx",
+                        lineNumber: 47,
+                        columnNumber: 19
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        id: "tech-stack",
+                        className: "flex gap-4",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: (0, _htmlPngDefault.default),
+                                alt: "",
+                                className: "w-8 hover:scale-105 transition-transform ease-in duration-300",
+                                title: "HTML"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/UserClass.jsx",
+                                lineNumber: 49,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: (0, _cssPngDefault.default),
+                                alt: "",
+                                className: "w-8 hover:scale-105 transition-transform ease-in duration-300",
+                                title: "CSS"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/UserClass.jsx",
+                                lineNumber: 50,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: (0, _jsPngDefault.default),
+                                alt: "",
+                                className: "w-8 hover:scale-105 transition-transform ease-in duration-300",
+                                title: "JavaScript"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/UserClass.jsx",
+                                lineNumber: 51,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: (0, _reactPngDefault.default),
+                                alt: "",
+                                className: "w-8 hover:scale-105 transition-transform ease-in duration-300",
+                                title: "React.JS"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/UserClass.jsx",
+                                lineNumber: 52,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: (0, _reduxPngDefault.default),
+                                alt: "",
+                                className: "w-8 hover:scale-105 transition-transform ease-in duration-300",
+                                title: "Redux"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/UserClass.jsx",
+                                lineNumber: 53,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: (0, _gitPngDefault.default),
+                                alt: "",
+                                className: "w-8 hover:scale-105 transition-transform ease-in duration-300",
+                                title: "Git"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/UserClass.jsx",
+                                lineNumber: 54,
+                                columnNumber: 25
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Swiggy Clone/src/components/UserClass.jsx",
+                        lineNumber: 48,
+                        columnNumber: 23
                     }, this)
-                }, void 0, false, {
-                    fileName: "Swiggy Clone/src/components/UserClass.jsx",
-                    lineNumber: 40,
-                    columnNumber: 19
-                }, this)
-            ]
-        }, void 0, true, {
+                ]
+            }, void 0, true, {
+                fileName: "Swiggy Clone/src/components/UserClass.jsx",
+                lineNumber: 40,
+                columnNumber: 19
+            }, this)
+        }, void 0, false, {
             fileName: "Swiggy Clone/src/components/UserClass.jsx",
-            lineNumber: 34,
+            lineNumber: 38,
             columnNumber: 13
         }, this);
     }
@@ -739,6 +818,24 @@ class UserClass extends (0, _reactDefault.default).Component {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["aQL8O","gJYyE"], null, "parcelRequire94c2")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/img/html.png":"gkCEl","../utils/img/css.png":"lPNg4","../utils/img/js.png":"axrCV","../utils/img/react.png":"54DGK","../utils/img/redux.png":"a9JlQ","../utils/img/git.png":"7dedd"}],"gkCEl":[function(require,module,exports,__globalThis) {
+module.exports = require("622cda2b2dca9d0").getBundleURL('6j7Fh') + "html.293f0424.png" + "?" + Date.now();
+
+},{"622cda2b2dca9d0":"lgJ39"}],"lPNg4":[function(require,module,exports,__globalThis) {
+module.exports = require("6df4afc16fd9c773").getBundleURL('6j7Fh') + "css.96dc4b44.png" + "?" + Date.now();
+
+},{"6df4afc16fd9c773":"lgJ39"}],"axrCV":[function(require,module,exports,__globalThis) {
+module.exports = require("3b6d8137afdd05e1").getBundleURL('6j7Fh') + "js.8cc00f27.png" + "?" + Date.now();
+
+},{"3b6d8137afdd05e1":"lgJ39"}],"54DGK":[function(require,module,exports,__globalThis) {
+module.exports = require("f774abc260cd56f7").getBundleURL('6j7Fh') + "react.4921746e.png" + "?" + Date.now();
+
+},{"f774abc260cd56f7":"lgJ39"}],"a9JlQ":[function(require,module,exports,__globalThis) {
+module.exports = require("4d39790e565c9ec3").getBundleURL('6j7Fh') + "redux.12dd84d0.png" + "?" + Date.now();
+
+},{"4d39790e565c9ec3":"lgJ39"}],"7dedd":[function(require,module,exports,__globalThis) {
+module.exports = require("4a5dc6d4737391").getBundleURL('6j7Fh') + "git.fc9803c1.png" + "?" + Date.now();
+
+},{"4a5dc6d4737391":"lgJ39"}]},["aQL8O","gJYyE"], null, "parcelRequire94c2")
 
 //# sourceMappingURL=About.f4d11fc0.js.map

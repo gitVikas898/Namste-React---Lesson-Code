@@ -22,6 +22,8 @@ export const useRestaurantMenu = (resId) =>{
 
         setMenuList(info);
 
+        console.log(response);
+
         
         const resInfoEx = response?.data?.cards[2]?.card?.card?.info || null ;
 

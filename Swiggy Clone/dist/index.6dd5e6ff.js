@@ -27349,7 +27349,7 @@ const Header = ()=>{
         "Login"
     ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " z-10 items-center p-2 flex justify-between shadow-md",
+        className: " z-10 items-center p-2 flex justify-between shadow-md w-full",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "max-w-24 ",
@@ -27384,7 +27384,7 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 to: "/",
-                                className: "bg-orange-500 px-4 py-2 rounded text-white",
+                                className: "bg-orange-400 px-4 py-2 rounded text-white",
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "Swiggy Clone/src/components/Header.jsx",
@@ -27399,7 +27399,7 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 to: "/about",
-                                className: "bg-orange-500 px-4 py-2 rounded text-white",
+                                className: "bg-orange-400 px-4 py-2 rounded text-white",
                                 children: "About Us"
                             }, void 0, false, {
                                 fileName: "Swiggy Clone/src/components/Header.jsx",
@@ -27414,7 +27414,7 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 to: "/contact",
-                                className: "bg-orange-500 px-4 py-2 rounded text-white",
+                                className: "bg-orange-400 px-4 py-2 rounded text-white",
                                 children: "Contact Us"
                             }, void 0, false, {
                                 fileName: "Swiggy Clone/src/components/Header.jsx",
@@ -27429,7 +27429,7 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 to: "/grocery",
-                                className: "bg-orange-500 px-4 py-2 rounded text-white",
+                                className: "bg-orange-400 px-4 py-2 rounded text-white",
                                 children: "Grocery"
                             }, void 0, false, {
                                 fileName: "Swiggy Clone/src/components/Header.jsx",
@@ -27444,7 +27444,7 @@ const Header = ()=>{
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 to: "/cart",
-                                className: "bg-orange-500 px-4 py-2 rounded text-white",
+                                className: "bg-orange-400 px-4 py-2 rounded text-white",
                                 children: "Cart"
                             }, void 0, false, {
                                 fileName: "Swiggy Clone/src/components/Header.jsx",
@@ -27458,7 +27458,7 @@ const Header = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "bg-orange-500 px-4 py-2 rounded text-white",
+                                className: "bg-orange-400 px-4 py-2 rounded text-white",
                                 onClick: ()=>{
                                     btnName === "Login" ? setbtn("Logout") : setbtn("Login");
                                 },
@@ -27505,7 +27505,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../utils/useOnlineStatus.js":"aMrX6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/img/logo.png":"kyiDc"}],"9xmpe":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../utils/useOnlineStatus.js":"aMrX6","../utils/img/logo.png":"kyiDc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports,__globalThis) {
 /**
  * React Router DOM v6.28.0
  *
@@ -35015,7 +35015,7 @@ const BodyComponent = ()=>{
                         className: "flex items-center gap-3",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "bg-orange-400 px-3 py-3 text-white rounded-md",
+                                className: "bg-orange-400 px-3 py-3 text-white rounded-md cursor-pointer",
                                 onClick: ()=>{
                                     const filteredList = listOfRestaurant.filter((res)=>res.avgRating > 4);
                                     setFilteredRestaurant(filteredList);
@@ -35027,7 +35027,7 @@ const BodyComponent = ()=>{
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "bg-green-600 p-3 rounded-md text-white",
+                                className: "bg-green-600 p-3 rounded-md text-white cursor-pointer",
                                 onClick: ()=>{
                                     const vegItems = listOfRestaurant.filter((res)=>res.veg);
                                     setFilteredRestaurant(vegItems);
@@ -35039,7 +35039,7 @@ const BodyComponent = ()=>{
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "bg-blue-400 p-3 rounded-md text-white",
+                                className: "bg-blue-400 p-3 rounded-md text-white cursor-pointer",
                                 onClick: ()=>{
                                     const quickItems = listOfRestaurant.filter((res)=>res?.sla?.deliveryTime <= 30);
                                     setFilteredRestaurant(quickItems);
@@ -35155,7 +35155,7 @@ const ResCard = (props)=>{
     const { resData } = props;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "card",
-        className: " rounded-md p-4  h-96 flex flex-col justify-between hover:scale-105 transition-transform ease-in duration-300  ",
+        className: " cursor-pointer rounded-md p-4  h-96 flex flex-col justify-between hover:scale-105 transition-transform ease-in duration-300  ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: " rounded-md  h-52 flex",
@@ -35292,289 +35292,127 @@ parcelHelpers.export(exports, "ShimmerMenu", ()=>ShimmerMenu);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Shimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "shimmer-container",
+        className: "grid grid-cols-4 gap-2 p-8",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "filter-container",
+                className: "h-96  grid gap-6 p-6",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "shimmer-button",
-                        children: "ShimmerButton"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "h-52 bg-gray-100 w-full rounded-lg"
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 5,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                        className: "px-8 bg-gray-100 w-1/2 rounded-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
                         lineNumber: 6,
-                        columnNumber: 13
+                        columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "shimmer-button",
-                        children: "ShimmerButton"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                        className: "px-8 bg-gray-100 w-1/2 rounded-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
                         lineNumber: 7,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "shimmer-button",
-                        children: "ShimmerButton"
-                    }, void 0, false, {
-                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                        lineNumber: 8,
-                        columnNumber: 13
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                lineNumber: 5,
-                columnNumber: 1
+                lineNumber: 4,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer",
+                className: "h-96  grid gap-6 p-6",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "shimmer-box"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 13,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "shimmer-head",
-                                children: "Shimmer Card"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 14,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "shimmer-head",
-                                children: "rating"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 15,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "shimmer-head",
-                                children: "cuisines"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 16,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
+                        className: "h-52 bg-gray-100 w-full rounded-lg"
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 11,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                        className: "px-8 bg-gray-100 w-1/2 rounded-full"
+                    }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
                         lineNumber: 12,
-                        columnNumber: 11
+                        columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "shimmer-box"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 20,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "shimmer-head",
-                                children: "Shimmer Card"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 21,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "shimmer-head",
-                                children: "rating"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 22,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "shimmer-head",
-                                children: "cuisines"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 23,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                        className: "px-8 bg-gray-100 w-1/2 rounded-full"
+                    }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                        lineNumber: 19,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "shimmer-box"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 27,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "shimmer-head",
-                                children: "Shimmer Card"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 28,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "shimmer-head",
-                                children: "rating"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 29,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "shimmer-head",
-                                children: "cuisines"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 30,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                        lineNumber: 26,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "shimmer-box"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 33,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "shimmer-head",
-                                children: "Shimmer Card"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 34,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "shimmer-head",
-                                children: "rating"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 35,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "shimmer-head",
-                                children: "cuisines"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 36,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                        lineNumber: 32,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "shimmer-box"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 40,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "shimmer-head",
-                                children: "Shimmer Card"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 41,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "shimmer-head",
-                                children: "rating"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 42,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "shimmer-head",
-                                children: "cuisines"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 43,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                        lineNumber: 39,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "shimmer-card",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "shimmer-box"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 47,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "shimmer-head",
-                                children: "Shimmer Card"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 48,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "shimmer-head",
-                                children: "rating"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 49,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "shimmer-head",
-                                children: "cuisines"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 50,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                        lineNumber: 46,
-                        columnNumber: 11
+                        lineNumber: 13,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "Swiggy Clone/src/components/shimmer.jsx",
                 lineNumber: 10,
-                columnNumber: 1
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "h-96  grid gap-6 p-6",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "h-52 bg-gray-100 w-full rounded-lg"
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 17,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                        className: "px-8 bg-gray-100 w-1/2 rounded-full"
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 18,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                        className: "px-8 bg-gray-100 w-1/2 rounded-full"
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 19,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                lineNumber: 16,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "h-96  grid gap-6 p-6",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "h-52 bg-gray-100 w-full rounded-lg"
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 23,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                        className: "px-8 bg-gray-100 w-1/2 rounded-full"
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 24,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                        className: "px-8 bg-gray-100 w-1/2 rounded-full"
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                lineNumber: 22,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
@@ -35586,127 +35424,43 @@ const Shimmer = ()=>{
 _c = Shimmer;
 const ShimmerMenu = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "main-container",
+        className: "  p-4 w-full items-center justify-center flex gap-3 rounded-lg h-56 ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-info-menu",
+                className: " w-1/2 grid gap-2 p-2",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        className: "shim-text",
-                        children: "Shimmer Res Name"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "px-6 bg-gray-100 rounded-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                        lineNumber: 62,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        className: "shim-text",
-                        children: "Shimmer info"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        className: "px-6 bg-gray-100 rounded-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                        lineNumber: 63,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                lineNumber: 61,
+                lineNumber: 34,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-menu-item",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "menu-shimmer",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                        className: "shim-text",
-                                        children: "Menu Item Name"
-                                    }, void 0, false, {
-                                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                        lineNumber: 70,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        className: "shim-text",
-                                        children: "info"
-                                    }, void 0, false, {
-                                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                        lineNumber: 71,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 69,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "shim-img-box"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 74,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                        lineNumber: 68,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "menu-shimmer",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                        className: "shim-text",
-                                        children: "Menu Item Name"
-                                    }, void 0, false, {
-                                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                        lineNumber: 80,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                        className: "shim-text",
-                                        children: "info"
-                                    }, void 0, false, {
-                                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                        lineNumber: 81,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 79,
-                                columnNumber: 13
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "shim-img-box"
-                            }, void 0, false, {
-                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                                lineNumber: 84,
-                                columnNumber: 13
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                        lineNumber: 78,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                className: "flex rounded-lg w-56 h-48 bg-gray-100"
+            }, void 0, false, {
                 fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                lineNumber: 67,
+                lineNumber: 38,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "Swiggy Clone/src/components/shimmer.jsx",
-        lineNumber: 60,
-        columnNumber: 10
+        lineNumber: 33,
+        columnNumber: 5
     }, undefined);
 };
 _c1 = ShimmerMenu;
@@ -35735,7 +35489,7 @@ var _logoPng = require("../utils/img/logo.png");
 var _logoPngDefault = parcelHelpers.interopDefault(_logoPng);
 const FooterComponent = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " text-white grid gap-8 p-4  bg-blue-500",
+        className: " text-white grid gap-8 p-4  bg-blue-500 w-full",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: " p-5 flex gap-2 items-center justify-center ",
@@ -36044,7 +35798,7 @@ $RefreshReg$(_c, "FooterComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../utils/constants.js":"lrd1H","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/img/logo.png":"kyiDc"}],"bJZIa":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","../utils/constants.js":"lrd1H","../utils/img/logo.png":"kyiDc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bJZIa":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$b5fd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -36058,6 +35812,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _userJsx = require("./User.jsx");
 const Contact = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex items-center justify-center bg-orange-400 p-6 min-h-screen",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userJsx.User), {}, void 0, false, {
             fileName: "Swiggy Clone/src/components/Contact.jsx",
             lineNumber: 5,
@@ -36119,165 +35874,155 @@ class User extends (0, _reactDefault.default).Component {
     render() {
         const { name, bio, avatar_url } = this.state.userInfo;
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "contact-card",
+            className: "bg-white rounded-lg p-6 flex flex-col gap-2 items-center justify-items-center w-1/2",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "contact-image-ctn",
+                    className: " max-w-52 rounded-full",
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         src: avatar_url,
-                        className: "user-img"
+                        className: "rounded-full w-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/User.jsx",
-                        lineNumber: 38,
+                        lineNumber: 40,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "Swiggy Clone/src/components/User.jsx",
-                    lineNumber: 37,
+                    lineNumber: 39,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "contact-info",
+                    className: "grid gap-3  p-6 ",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                            className: "text-2xl font-semibold",
                             children: name
                         }, void 0, false, {
                             fileName: "Swiggy Clone/src/components/User.jsx",
-                            lineNumber: 41,
+                            lineNumber: 44,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            className: "text-slate-700",
                             children: bio
                         }, void 0, false, {
                             fileName: "Swiggy Clone/src/components/User.jsx",
-                            lineNumber: 42,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                            children: "Social Links"
-                        }, void 0, false, {
-                            fileName: "Swiggy Clone/src/components/User.jsx",
-                            lineNumber: 43,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "contact-links",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "socials",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                        href: "#",
-                                        children: [
-                                            " ",
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                                src: (0, _twitterPngDefault.default),
-                                                alt: "",
-                                                className: "ctn-icons"
-                                            }, void 0, false, {
-                                                fileName: "Swiggy Clone/src/components/User.jsx",
-                                                lineNumber: 47,
-                                                columnNumber: 42
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "Swiggy Clone/src/components/User.jsx",
-                                        lineNumber: 47,
-                                        columnNumber: 29
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "Swiggy Clone/src/components/User.jsx",
-                                    lineNumber: 46,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "socials",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                        href: "#",
-                                        children: [
-                                            " ",
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                                src: (0, _instagramPngDefault.default),
-                                                alt: "",
-                                                className: "ctn-icons"
-                                            }, void 0, false, {
-                                                fileName: "Swiggy Clone/src/components/User.jsx",
-                                                lineNumber: 50,
-                                                columnNumber: 42
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "Swiggy Clone/src/components/User.jsx",
-                                        lineNumber: 50,
-                                        columnNumber: 29
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "Swiggy Clone/src/components/User.jsx",
-                                    lineNumber: 49,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "socials",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                        href: "#",
-                                        children: [
-                                            " ",
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                                src: (0, _linkedinPngDefault.default),
-                                                alt: "",
-                                                className: "ctn-icons"
-                                            }, void 0, false, {
-                                                fileName: "Swiggy Clone/src/components/User.jsx",
-                                                lineNumber: 53,
-                                                columnNumber: 43
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "Swiggy Clone/src/components/User.jsx",
-                                        lineNumber: 53,
-                                        columnNumber: 30
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "Swiggy Clone/src/components/User.jsx",
-                                    lineNumber: 52,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "socials",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                        href: "#",
-                                        children: [
-                                            " ",
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                                src: (0, _githubPngDefault.default),
-                                                alt: "",
-                                                className: "ctn-icons"
-                                            }, void 0, false, {
-                                                fileName: "Swiggy Clone/src/components/User.jsx",
-                                                lineNumber: 56,
-                                                columnNumber: 43
-                                            }, this)
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "Swiggy Clone/src/components/User.jsx",
-                                        lineNumber: 56,
-                                        columnNumber: 30
-                                    }, this)
-                                }, void 0, false, {
-                                    fileName: "Swiggy Clone/src/components/User.jsx",
-                                    lineNumber: 55,
-                                    columnNumber: 25
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "Swiggy Clone/src/components/User.jsx",
-                            lineNumber: 44,
+                            lineNumber: 45,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "Swiggy Clone/src/components/User.jsx",
-                    lineNumber: 40,
+                    lineNumber: 43,
                     columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: " flex flex-col gap-3 items-center justify-between w-full",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                className: "text-gray-600 text-2xl",
+                                children: "Social Links"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/User.jsx",
+                                lineNumber: 50,
+                                columnNumber: 29
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "Swiggy Clone/src/components/User.jsx",
+                            lineNumber: 49,
+                            columnNumber: 25
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "flex items-center justify-between gap-4",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                    href: "",
+                                    children: [
+                                        " ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                            src: (0, _twitterPngDefault.default),
+                                            alt: "",
+                                            className: "w-12"
+                                        }, void 0, false, {
+                                            fileName: "Swiggy Clone/src/components/User.jsx",
+                                            lineNumber: 53,
+                                            columnNumber: 41
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "Swiggy Clone/src/components/User.jsx",
+                                    lineNumber: 53,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                    href: "#",
+                                    children: [
+                                        " ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                            src: (0, _instagramPngDefault.default),
+                                            alt: "",
+                                            className: "w-12"
+                                        }, void 0, false, {
+                                            fileName: "Swiggy Clone/src/components/User.jsx",
+                                            lineNumber: 54,
+                                            columnNumber: 42
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "Swiggy Clone/src/components/User.jsx",
+                                    lineNumber: 54,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                    href: "#",
+                                    children: [
+                                        " ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                            src: (0, _linkedinPngDefault.default),
+                                            alt: "",
+                                            className: "w-12"
+                                        }, void 0, false, {
+                                            fileName: "Swiggy Clone/src/components/User.jsx",
+                                            lineNumber: 55,
+                                            columnNumber: 42
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "Swiggy Clone/src/components/User.jsx",
+                                    lineNumber: 55,
+                                    columnNumber: 29
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                    href: "#",
+                                    children: [
+                                        " ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                            src: (0, _githubPngDefault.default),
+                                            alt: "",
+                                            className: "w-12"
+                                        }, void 0, false, {
+                                            fileName: "Swiggy Clone/src/components/User.jsx",
+                                            lineNumber: 56,
+                                            columnNumber: 42
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "Swiggy Clone/src/components/User.jsx",
+                                    lineNumber: 56,
+                                    columnNumber: 29
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "Swiggy Clone/src/components/User.jsx",
+                            lineNumber: 52,
+                            columnNumber: 25
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "Swiggy Clone/src/components/User.jsx",
+                    lineNumber: 48,
+                    columnNumber: 21
                 }, this)
             ]
         }, void 0, true, {
@@ -36431,50 +36176,61 @@ var _menuInfoJsx = require("./MenuInfo.jsx");
 var _shimmerJsx = require("./shimmer.jsx");
 var _reactRouterDom = require("react-router-dom");
 var _useRestaurantMenuJsx = require("../utils/useRestaurantMenu.jsx");
+var _menuPng = require("../utils/img/menu.png");
+var _menuPngDefault = parcelHelpers.interopDefault(_menuPng);
 var _s = $RefreshSig$();
 const Menu = ()=>{
     _s();
     const { resId } = (0, _reactRouterDom.useParams)();
     const { resinfo, menuList } = (0, _useRestaurantMenuJsx.useRestaurantMenu)(resId); //my custom hook in utils
-    return menuList.length === 0 || resinfo.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsx.ShimmerMenu), {}, void 0, false, {
+    return menuList.length === 0 || resinfo.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "grid gap-4 m-5 place-items-center",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsx.ShimmerMenu), {}, void 0, false, {
+            fileName: "Swiggy Clone/src/components/Menu.jsx",
+            lineNumber: 20,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false, {
         fileName: "Swiggy Clone/src/components/Menu.jsx",
-        lineNumber: 16,
-        columnNumber: 61
+        lineNumber: 19,
+        columnNumber: 10
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "menu-container",
+        className: "grid gap-4 m-5 place-items-center",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuInfoJsx.MenuInfo), {
                 info: resinfo
             }, resinfo.id, false, {
                 fileName: "Swiggy Clone/src/components/Menu.jsx",
-                lineNumber: 18,
+                lineNumber: 25,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "menu-title",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                    children: "Menu"
+                className: " w-full flex items-center justify-center text-2xl bg-gray-50 rounded-full",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: (0, _menuPngDefault.default),
+                    alt: "",
+                    className: "w-16 mx-3"
                 }, void 0, false, {
                     fileName: "Swiggy Clone/src/components/Menu.jsx",
-                    lineNumber: 20,
+                    lineNumber: 28,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "Swiggy Clone/src/components/Menu.jsx",
-                lineNumber: 19,
+                lineNumber: 26,
                 columnNumber: 13
             }, undefined),
             menuList.map((menu)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuCardJsx.MenuCard), {
                     menuData: menu
                 }, menu.id, false, {
                     fileName: "Swiggy Clone/src/components/Menu.jsx",
-                    lineNumber: 23,
+                    lineNumber: 32,
                     columnNumber: 17
                 }, undefined))
         ]
     }, void 0, true, {
         fileName: "Swiggy Clone/src/components/Menu.jsx",
-        lineNumber: 17,
+        lineNumber: 24,
         columnNumber: 9
     }, undefined);
 };
@@ -36493,7 +36249,7 @@ $RefreshReg$(_c, "Menu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./MenuCard.jsx":"8XYzG","./MenuInfo.jsx":"2loIY","./shimmer.jsx":"k4r92","react-router-dom":"9xmpe","../utils/useRestaurantMenu.jsx":"fMRBY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8XYzG":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","./MenuCard.jsx":"8XYzG","./MenuInfo.jsx":"2loIY","./shimmer.jsx":"k4r92","react-router-dom":"9xmpe","../utils/useRestaurantMenu.jsx":"fMRBY","../utils/img/menu.png":"4hjA7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8XYzG":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$7b08 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -36508,19 +36264,21 @@ var _constants = require("../utils/constants");
 const MenuCard = (props)=>{
     const { menuData } = props;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "menu-card",
+        className: " shadow-lg p-4 w-1/2 flex gap-3 rounded-lg hover:scale-105 transition-transform duration-300 ease-in",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "info-box",
+                className: " w-full grid gap-2 p-2",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "text-2xl font-semibold",
                         children: menuData.name
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/MenuCard.jsx",
                         lineNumber: 9,
                         columnNumber: 21
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "text-xl font-semibold",
                         children: [
                             "\u20B9",
                             Math.round(menuData.defaultPrice / 100 || menuData.price / 100)
@@ -36531,6 +36289,7 @@ const MenuCard = (props)=>{
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "text-gray-500 line-clamp-3",
                         children: menuData.description
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/MenuCard.jsx",
@@ -36544,9 +36303,9 @@ const MenuCard = (props)=>{
                 columnNumber: 17
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "image-box",
+                className: "flex rounded-lg ",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "menu-image",
+                    className: "w-full object-center object-cover rounded-lg",
                     src: (0, _constants.MENU_ITEM_URL) + menuData.imageId
                 }, void 0, false, {
                     fileName: "Swiggy Clone/src/components/MenuCard.jsx",
@@ -36589,46 +36348,60 @@ var _constants = require("../utils/constants");
 const MenuInfo = (props)=>{
     const { info } = props;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "main",
+        className: "shadow-lg flex justify-between w-1/2 p-4 rounded-lg",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "grid gap-1 place-items-center justify-items-start",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        className: "text-4xl font-semibold",
                         children: info.name
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/MenuInfo.jsx",
                         lineNumber: 7,
                         columnNumber: 21
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: info.cuisines.join(",")
-                    }, void 0, false, {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex gap-2 items-center font-semibold",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: (0, _constants.RATING_URL),
+                                className: "w-6"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/MenuInfo.jsx",
+                                lineNumber: 9,
+                                columnNumber: 25
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: info.avgRating
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/MenuInfo.jsx",
+                                lineNumber: 10,
+                                columnNumber: 25
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: info.costForTwoMessage
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/MenuInfo.jsx",
+                                lineNumber: 11,
+                                columnNumber: 25
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
                         fileName: "Swiggy Clone/src/components/MenuInfo.jsx",
                         lineNumber: 8,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: info.avgRating
-                    }, void 0, false, {
-                        fileName: "Swiggy Clone/src/components/MenuInfo.jsx",
-                        lineNumber: 9,
-                        columnNumber: 21
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "text-gray-500",
                         children: info.areaName
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/MenuInfo.jsx",
-                        lineNumber: 10,
+                        lineNumber: 13,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: info.costForTwoMessage
-                    }, void 0, false, {
-                        fileName: "Swiggy Clone/src/components/MenuInfo.jsx",
-                        lineNumber: 11,
-                        columnNumber: 21
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "text-gray-500",
                         children: [
                             info?.sla?.minDeliveryTime,
                             "-",
@@ -36637,7 +36410,7 @@ const MenuInfo = (props)=>{
                         ]
                     }, void 0, true, {
                         fileName: "Swiggy Clone/src/components/MenuInfo.jsx",
-                        lineNumber: 12,
+                        lineNumber: 14,
                         columnNumber: 21
                     }, undefined)
                 ]
@@ -36647,19 +36420,19 @@ const MenuInfo = (props)=>{
                 columnNumber: 17
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "image-box",
+                className: "w-40 flex rounded-lg",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "menu-image",
+                    className: "w-full object-cover rounded ",
                     src: (0, _constants.CDN_URL) + info.cloudinaryImageId,
                     alt: ""
                 }, void 0, false, {
                     fileName: "Swiggy Clone/src/components/MenuInfo.jsx",
-                    lineNumber: 15,
+                    lineNumber: 17,
                     columnNumber: 21
                 }, undefined)
             }, void 0, false, {
                 fileName: "Swiggy Clone/src/components/MenuInfo.jsx",
-                lineNumber: 14,
+                lineNumber: 16,
                 columnNumber: 17
             }, undefined)
         ]
@@ -36705,6 +36478,7 @@ const useRestaurantMenu = (resId)=>{
             const menu = response?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards;
             const info = menu.map((res)=>res.card.info) || [];
             setMenuList(info);
+            console.log(response);
             const resInfoEx = response?.data?.cards[2]?.card?.card?.info || null;
             setResInfo(resInfoEx);
         } catch (error) {
@@ -36723,7 +36497,10 @@ _s(useRestaurantMenu, "Cr75q59Wzwa+QlJcgKYPqT/oKHg=");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","./constants":"lrd1H","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1uGw5":[function(require,module,exports,__globalThis) {
+},{"react":"21dqq","./constants":"lrd1H","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4hjA7":[function(require,module,exports,__globalThis) {
+module.exports = require("559bb7089ef3413b").getBundleURL('81eGo') + "menu.d9cc74c3.png" + "?" + Date.now();
+
+},{"559bb7089ef3413b":"lgJ39"}],"1uGw5":[function(require,module,exports,__globalThis) {
 module.exports = require("5f4cb0d6226ed913")(require("9afaed3d69c89a49").getBundleURL('81eGo') + "Grocery.b6a5cf2a.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;

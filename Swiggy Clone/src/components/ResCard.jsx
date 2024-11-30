@@ -2,7 +2,7 @@ import { CDN_URL, RATING_URL } from "../utils/constants.js";
 export const ResCard = (props) => {
     const { resData } = props;
     return (
-      <div id="card" className=" rounded-md p-4  h-96 flex flex-col justify-between hover:scale-105 transition-transform ease-in duration-300  ">
+      <div id="card" className=" cursor-pointer rounded-md p-4  h-96 flex flex-col justify-between hover:scale-105 transition-transform ease-in duration-300  ">
         
         <div className=" rounded-md  h-52 flex">
           <img
