@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react";
-import { ResCard } from "./ResCard.jsx";
+import { ResCard,withLabelVeg } from "./ResCard.jsx";
 import { Shimmer } from "./shimmer.jsx";
 import { Link } from "react-router-dom";
 import { MAIN_RESTAURANTS_API } from "../utils/constants.js";
@@ -9,6 +9,8 @@ export const BodyComponent = () => {
    
   let [listOfRestaurant, setList] =  useState([]);
   let [filteredRestaurant , setFilteredRestaurant] = useState([]);
+
+  const LabelVeg = withLabelVeg(ResCard);
 
   useEffect(()=>{
       fetchData();
@@ -23,6 +25,7 @@ export const BodyComponent = () => {
       const restaurantInfo = restaurants.map(restaurant => restaurant.info);
       setList(restaurantInfo);
       setFilteredRestaurant(restaurantInfo);
+      console.log(response)
   }
 
   let [searchText , setSearchText] = useState("");
@@ -79,7 +82,13 @@ export const BodyComponent = () => {
         <div className="p-4  grid grid-cols-4 gap-4">
           {filteredRestaurant.map((restaurant) => (
             <Link key={restaurant.id} to={"/restaurants/"+restaurant.id} className="res-text">
-              <ResCard resData={restaurant} />
+
+
+              {restaurant.veg ? <LabelVeg  resData={restaurant}></LabelVeg> : 
+                 <ResCard resData={restaurant} />
+              }
+
+
             </Link>
           ))}
         </div>

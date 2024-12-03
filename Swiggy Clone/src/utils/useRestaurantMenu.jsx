@@ -5,6 +5,8 @@ export const useRestaurantMenu = (resId) =>{
 
     const[menuList ,setMenuList] = useState([]);
     const [resinfo,setResInfo] = useState([]);
+    const [catergory,setCategory] = useState([]);
+   
 
     useEffect(()=>{
         fetchMenu();
@@ -18,12 +20,16 @@ export const useRestaurantMenu = (resId) =>{
 
         const menu = response?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards;
 
-        const info = menu.map((res)=>res.card.info) ||[];
+        const info = menu.map((res)=>res.card.info) ||[];   //recomended 
 
-        setMenuList(info);
+        const categories =  response?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c?.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
 
-        console.log(response);
 
+        console.log(categories);
+       
+        setCategory(categories);
+
+        setMenuList(info);    
         
         const resInfoEx = response?.data?.cards[2]?.card?.card?.info || null ;
 
@@ -34,5 +40,5 @@ export const useRestaurantMenu = (resId) =>{
        }
     }
 
-    return{menuList,resinfo}
+    return{menuList,resinfo,catergory}
 }

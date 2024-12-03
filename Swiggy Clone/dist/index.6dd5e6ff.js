@@ -34975,6 +34975,7 @@ const BodyComponent = ()=>{
     _s();
     let [listOfRestaurant, setList] = (0, _react.useState)([]);
     let [filteredRestaurant, setFilteredRestaurant] = (0, _react.useState)([]);
+    const LabelVeg = (0, _resCardJsx.withLabelVeg)((0, _resCardJsx.ResCard));
     (0, _react.useEffect)(()=>{
         fetchData();
     }, []);
@@ -34985,6 +34986,7 @@ const BodyComponent = ()=>{
         const restaurantInfo = restaurants.map((restaurant)=>restaurant.info);
         setList(restaurantInfo);
         setFilteredRestaurant(restaurantInfo);
+        console.log(response);
     };
     let [searchText, setSearchText] = (0, _react.useState)("");
     const status = (0, _useOnlineStatusJs.useOnlineStatus)();
@@ -34993,17 +34995,17 @@ const BodyComponent = ()=>{
             children: "Looks Like You are Not Connected to the Internet, Please Check your connection!"
         }, void 0, false, {
             fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-            lineNumber: 34,
+            lineNumber: 37,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-        lineNumber: 33,
+        lineNumber: 36,
         columnNumber: 5
     }, undefined);
     return listOfRestaurant.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsx.Shimmer), {}, void 0, false, {
         fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-        lineNumber: 40,
+        lineNumber: 43,
         columnNumber: 45
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: " p-4  grid gap-6",
@@ -35023,7 +35025,7 @@ const BodyComponent = ()=>{
                                 children: "Top Rated "
                             }, void 0, false, {
                                 fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-                                lineNumber: 46,
+                                lineNumber: 49,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35035,7 +35037,7 @@ const BodyComponent = ()=>{
                                 children: "Veg Only"
                             }, void 0, false, {
                                 fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-                                lineNumber: 51,
+                                lineNumber: 54,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35047,13 +35049,13 @@ const BodyComponent = ()=>{
                                 children: "Near Me"
                             }, void 0, false, {
                                 fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-                                lineNumber: 56,
+                                lineNumber: 59,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-                        lineNumber: 45,
+                        lineNumber: 48,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35069,7 +35071,7 @@ const BodyComponent = ()=>{
                                 }
                             }, void 0, false, {
                                 fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-                                lineNumber: 66,
+                                lineNumber: 69,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35081,19 +35083,19 @@ const BodyComponent = ()=>{
                                 children: "Search"
                             }, void 0, false, {
                                 fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-                                lineNumber: 69,
+                                lineNumber: 72,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-                        lineNumber: 64,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-                lineNumber: 43,
+                lineNumber: 46,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35101,27 +35103,33 @@ const BodyComponent = ()=>{
                 children: filteredRestaurant.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/restaurants/" + restaurant.id,
                         className: "res-text",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resCardJsx.ResCard), {
+                        children: restaurant.veg ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(LabelVeg, {
                             resData: restaurant
                         }, void 0, false, {
                             fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-                            lineNumber: 82,
-                            columnNumber: 15
+                            lineNumber: 87,
+                            columnNumber: 33
+                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resCardJsx.ResCard), {
+                            resData: restaurant
+                        }, void 0, false, {
+                            fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
+                            lineNumber: 88,
+                            columnNumber: 18
                         }, undefined)
                     }, restaurant.id, false, {
                         fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-                        lineNumber: 81,
+                        lineNumber: 84,
                         columnNumber: 13
                     }, undefined))
             }, void 0, false, {
                 fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-                lineNumber: 79,
+                lineNumber: 82,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "Swiggy Clone/src/components/BodyComponent.jsx",
-        lineNumber: 41,
+        lineNumber: 44,
         columnNumber: 7
     }, undefined);
 };
@@ -35149,13 +35157,14 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "ResCard", ()=>ResCard);
+parcelHelpers.export(exports, "withLabelVeg", ()=>withLabelVeg);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constantsJs = require("../utils/constants.js");
 const ResCard = (props)=>{
     const { resData } = props;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "card",
-        className: " cursor-pointer rounded-md p-4  h-96 flex flex-col justify-between hover:scale-105 transition-transform ease-in duration-300  ",
+        className: " cursor-pointer rounded-md p-4  h-96 flex flex-col justify-between hover:shadow-lg hover:scale-105  transition-transform   ease-in duration-300  ",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: " rounded-md  h-52 flex",
@@ -35252,6 +35261,33 @@ const ResCard = (props)=>{
     }, undefined);
 };
 _c = ResCard;
+const withLabelVeg = (ResCard)=>{
+    return (props)=>{
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                    className: "px-4 bg-green-500 text-white absolute m-2 rounded-md z-10",
+                    children: "Veg"
+                }, void 0, false, {
+                    fileName: "Swiggy Clone/src/components/ResCard.jsx",
+                    lineNumber: 35,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(ResCard, {
+                    ...props
+                }, void 0, false, {
+                    fileName: "Swiggy Clone/src/components/ResCard.jsx",
+                    lineNumber: 36,
+                    columnNumber: 11
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "Swiggy Clone/src/components/ResCard.jsx",
+            lineNumber: 34,
+            columnNumber: 9
+        }, undefined);
+    };
+};
 var _c;
 $RefreshReg$(_c, "ResCard");
 
@@ -35289,6 +35325,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Shimmer", ()=>Shimmer);
 parcelHelpers.export(exports, "ShimmerMenu", ()=>ShimmerMenu);
+parcelHelpers.export(exports, "ShimmerMenuList", ()=>ShimmerMenuList);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Shimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35304,14 +35341,14 @@ const Shimmer = ()=>{
                         lineNumber: 5,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "px-8 bg-gray-100 w-1/2 rounded-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
                         lineNumber: 6,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "px-8 bg-gray-100 w-1/2 rounded-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
@@ -35334,14 +35371,14 @@ const Shimmer = ()=>{
                         lineNumber: 11,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "px-8 bg-gray-100 w-1/2 rounded-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
                         lineNumber: 12,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "px-8 bg-gray-100 w-1/2 rounded-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
@@ -35364,14 +35401,14 @@ const Shimmer = ()=>{
                         lineNumber: 17,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "px-8 bg-gray-100 w-1/2 rounded-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
                         lineNumber: 18,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "px-8 bg-gray-100 w-1/2 rounded-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
@@ -35394,14 +35431,14 @@ const Shimmer = ()=>{
                         lineNumber: 23,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "px-8 bg-gray-100 w-1/2 rounded-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
                         lineNumber: 24,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("sapn", {
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                         className: "px-8 bg-gray-100 w-1/2 rounded-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
@@ -35424,23 +35461,31 @@ const Shimmer = ()=>{
 _c = Shimmer;
 const ShimmerMenu = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "  p-4 w-full items-center justify-center flex gap-3 rounded-lg h-56 ",
+        className: " rounded-lgp-6 w-1/2 flex gap-4 justify-between",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: " w-1/2 grid gap-2 p-2",
+                id: "shimmer-info",
+                className: " grid gap-3 p-2",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "px-6 bg-gray-100 rounded-full"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "w-96 h-8 bg-gray-100 rounded-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                        lineNumber: 35,
+                        lineNumber: 38,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                        className: "px-6 bg-gray-100 rounded-full"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "w-80 h-8 bg-gray-100 rounded-full"
                     }, void 0, false, {
                         fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                        lineNumber: 36,
+                        lineNumber: 39,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "w-72 h-8 bg-gray-100 rounded-full"
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 40,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -35450,10 +35495,11 @@ const ShimmerMenu = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex rounded-lg w-56 h-48 bg-gray-100"
+                id: "shimmer-image",
+                className: "bg-gray-100 rounded-lg w-52 h-52"
             }, void 0, false, {
                 fileName: "Swiggy Clone/src/components/shimmer.jsx",
-                lineNumber: 38,
+                lineNumber: 42,
                 columnNumber: 7
             }, undefined)
         ]
@@ -35464,9 +35510,170 @@ const ShimmerMenu = ()=>{
     }, undefined);
 };
 _c1 = ShimmerMenu;
-var _c, _c1;
+const ShimmerMenuList = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "container",
+        className: "grid gap-4",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "  p-6  flex gap-4 rounded-lg justify-between",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        id: "shimmer-info",
+                        className: "grid gap-3 p-2",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "w-96 h-8 bg-gray-100 rounded-full"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                                lineNumber: 59,
+                                columnNumber: 9
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "w-80 h-8 bg-gray-100 rounded-full"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                                lineNumber: 60,
+                                columnNumber: 9
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "w-72 h-8 bg-gray-100 rounded-full"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                                lineNumber: 61,
+                                columnNumber: 9
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 55,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        id: "shimmer-image",
+                        className: "bg-gray-100 rounded-lg w-52 h-52"
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 63,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                lineNumber: 54,
+                columnNumber: 5
+            }, undefined),
+            ";",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: " p-6 flex gap-4 rounded-lg justify-between",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        id: "shimmer-info",
+                        className: " grid gap-3 p-2",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "w-96 h-8 bg-gray-100 rounded-full"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                                lineNumber: 71,
+                                columnNumber: 9
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "w-80 h-8 bg-gray-100 rounded-full"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                                lineNumber: 72,
+                                columnNumber: 9
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "w-72 h-8 bg-gray-100 rounded-full"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                                lineNumber: 73,
+                                columnNumber: 9
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 67,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        id: "shimmer-image",
+                        className: "bg-gray-100 rounded-lg w-52 h-52"
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 75,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                lineNumber: 66,
+                columnNumber: 5
+            }, undefined),
+            ";",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: " rounded-lg p-6  flex gap-4 justify-between",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        id: "shimmer-info",
+                        className: "grid gap-3 p-2",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "w-96 h-8 bg-gray-100 rounded-full"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                                lineNumber: 84,
+                                columnNumber: 9
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "w-80 h-8 bg-gray-100 rounded-full"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                                lineNumber: 85,
+                                columnNumber: 9
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "w-72 h-8 bg-gray-100 rounded-full"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                                lineNumber: 86,
+                                columnNumber: 9
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 80,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        id: "shimmer-image",
+                        className: "bg-gray-100 rounded-lg w-52 h-52"
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                        lineNumber: 88,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "Swiggy Clone/src/components/shimmer.jsx",
+                lineNumber: 79,
+                columnNumber: 5
+            }, undefined),
+            ";"
+        ]
+    }, void 0, true, {
+        fileName: "Swiggy Clone/src/components/shimmer.jsx",
+        lineNumber: 52,
+        columnNumber: 10
+    }, undefined);
+};
+_c2 = ShimmerMenuList;
+var _c, _c1, _c2;
 $RefreshReg$(_c, "Shimmer");
 $RefreshReg$(_c1, "ShimmerMenu");
+$RefreshReg$(_c2, "ShimmerMenuList");
 
   $parcel$ReactRefreshHelpers$68ca.postlude(module);
 } finally {
@@ -36178,21 +36385,31 @@ var _reactRouterDom = require("react-router-dom");
 var _useRestaurantMenuJsx = require("../utils/useRestaurantMenu.jsx");
 var _menuPng = require("../utils/img/menu.png");
 var _menuPngDefault = parcelHelpers.interopDefault(_menuPng);
+var _accordionJsx = require("./Accordion.jsx");
+var _react = require("react");
 var _s = $RefreshSig$();
 const Menu = ()=>{
     _s();
     const { resId } = (0, _reactRouterDom.useParams)();
-    const { resinfo, menuList } = (0, _useRestaurantMenuJsx.useRestaurantMenu)(resId); //my custom hook in utils
+    const { resinfo, menuList, catergory } = (0, _useRestaurantMenuJsx.useRestaurantMenu)(resId); //my custom hook in utils
+    const [showIndex, setShowIndex] = (0, _react.useState)(0);
     return menuList.length === 0 || resinfo.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "grid gap-4 m-5 place-items-center",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsx.ShimmerMenu), {}, void 0, false, {
-            fileName: "Swiggy Clone/src/components/Menu.jsx",
-            lineNumber: 20,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
+        className: "flex flex-col gap-4 items-center justify-between p-6 border-2 border-green-500 border-solid",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsx.ShimmerMenu), {}, void 0, false, {
+                fileName: "Swiggy Clone/src/components/Menu.jsx",
+                lineNumber: 24,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerJsx.ShimmerMenuList), {}, void 0, false, {
+                fileName: "Swiggy Clone/src/components/Menu.jsx",
+                lineNumber: 25,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "Swiggy Clone/src/components/Menu.jsx",
-        lineNumber: 19,
+        lineNumber: 23,
         columnNumber: 10
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "grid gap-4 m-5 place-items-center",
@@ -36201,7 +36418,7 @@ const Menu = ()=>{
                 info: resinfo
             }, resinfo.id, false, {
                 fileName: "Swiggy Clone/src/components/Menu.jsx",
-                lineNumber: 25,
+                lineNumber: 30,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36212,29 +36429,31 @@ const Menu = ()=>{
                     className: "w-16 mx-3"
                 }, void 0, false, {
                     fileName: "Swiggy Clone/src/components/Menu.jsx",
-                    lineNumber: 28,
+                    lineNumber: 33,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "Swiggy Clone/src/components/Menu.jsx",
-                lineNumber: 26,
+                lineNumber: 31,
                 columnNumber: 13
             }, undefined),
-            menuList.map((menu)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuCardJsx.MenuCard), {
-                    menuData: menu
-                }, menu.id, false, {
+            catergory.map((item, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _accordionJsx.Accordion), {
+                    categoryData: item?.card?.card,
+                    showItems: index === showIndex ? true : false,
+                    setShowIndex: ()=>setShowIndex(index === showIndex ? null : index)
+                }, item?.card?.card.title, false, {
                     fileName: "Swiggy Clone/src/components/Menu.jsx",
-                    lineNumber: 32,
-                    columnNumber: 17
+                    lineNumber: 38,
+                    columnNumber: 21
                 }, undefined))
         ]
     }, void 0, true, {
         fileName: "Swiggy Clone/src/components/Menu.jsx",
-        lineNumber: 24,
+        lineNumber: 29,
         columnNumber: 9
     }, undefined);
 };
-_s(Menu, "qDu4+8tf+E2Eb3rDCsKsdPX8flU=", false, function() {
+_s(Menu, "dKEGHkqu0giC6kDqoT7eCLOD+SI=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
         (0, _useRestaurantMenuJsx.useRestaurantMenu)
@@ -36249,7 +36468,7 @@ $RefreshReg$(_c, "Menu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./MenuCard.jsx":"8XYzG","./MenuInfo.jsx":"2loIY","./shimmer.jsx":"k4r92","react-router-dom":"9xmpe","../utils/useRestaurantMenu.jsx":"fMRBY","../utils/img/menu.png":"4hjA7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8XYzG":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","./MenuCard.jsx":"8XYzG","./MenuInfo.jsx":"2loIY","./shimmer.jsx":"k4r92","react-router-dom":"9xmpe","../utils/useRestaurantMenu.jsx":"fMRBY","../utils/img/menu.png":"4hjA7","./Accordion.jsx":"fbgeC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"8XYzG":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$7b08 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -36468,6 +36687,7 @@ const useRestaurantMenu = (resId)=>{
     _s();
     const [menuList, setMenuList] = (0, _react.useState)([]);
     const [resinfo, setResInfo] = (0, _react.useState)([]);
+    const [catergory, setCategory] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         fetchMenu();
     }, []);
@@ -36476,9 +36696,11 @@ const useRestaurantMenu = (resId)=>{
             const data = await fetch((0, _constants.MENU_API) + resId);
             const response = await data.json();
             const menu = response?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards;
-            const info = menu.map((res)=>res.card.info) || [];
+            const info = menu.map((res)=>res.card.info) || []; //recomended 
+            const categories = response?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c?.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+            console.log(categories);
+            setCategory(categories);
             setMenuList(info);
-            console.log(response);
             const resInfoEx = response?.data?.cards[2]?.card?.card?.info || null;
             setResInfo(resInfoEx);
         } catch (error) {
@@ -36487,10 +36709,11 @@ const useRestaurantMenu = (resId)=>{
     };
     return {
         menuList,
-        resinfo
+        resinfo,
+        catergory
     };
 };
-_s(useRestaurantMenu, "Cr75q59Wzwa+QlJcgKYPqT/oKHg=");
+_s(useRestaurantMenu, "rCTksf7jhi45vNJfb2vTiAcTwl4=");
 
   $parcel$ReactRefreshHelpers$e540.postlude(module);
 } finally {
@@ -36500,7 +36723,244 @@ _s(useRestaurantMenu, "Cr75q59Wzwa+QlJcgKYPqT/oKHg=");
 },{"react":"21dqq","./constants":"lrd1H","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4hjA7":[function(require,module,exports,__globalThis) {
 module.exports = require("559bb7089ef3413b").getBundleURL('81eGo') + "menu.d9cc74c3.png" + "?" + Date.now();
 
-},{"559bb7089ef3413b":"lgJ39"}],"1uGw5":[function(require,module,exports,__globalThis) {
+},{"559bb7089ef3413b":"lgJ39"}],"fbgeC":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$e935 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e935.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Accordion", ()=>Accordion);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _downPng = require("../utils/img/down.png");
+var _downPngDefault = parcelHelpers.interopDefault(_downPng);
+var _upPng = require("../utils/img/up.png");
+var _upPngDefault = parcelHelpers.interopDefault(_upPng);
+var _itemJsx = require("./Item.jsx");
+const Accordion = (props)=>{
+    // const [showItems,setShowItems] = useState(true);
+    const handleClick = ()=>{
+        setShowIndex(showItems ? null : categoryData.id);
+    };
+    const { categoryData, showItems, setShowIndex } = props;
+    console.log(categoryData);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "border-y-[12px] boder-solid border-gray-100 rounded-lg grid gap-2 w-1/2",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "header",
+                className: "flex items-center justify-between cursor-pointer p-2",
+                onClick: handleClick,
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "font-bold text-gray-800",
+                        children: [
+                            categoryData.title,
+                            " (",
+                            categoryData.itemCards.length,
+                            ")"
+                        ]
+                    }, void 0, true, {
+                        fileName: "Swiggy Clone/src/components/Accordion.jsx",
+                        lineNumber: 22,
+                        columnNumber: 21
+                    }, undefined),
+                    showItems ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: (0, _upPngDefault.default),
+                            alt: "uparrow",
+                            className: "w-6 cursor-pointer"
+                        }, void 0, false, {
+                            fileName: "Swiggy Clone/src/components/Accordion.jsx",
+                            lineNumber: 23,
+                            columnNumber: 40
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/Accordion.jsx",
+                        lineNumber: 23,
+                        columnNumber: 34
+                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: (0, _downPngDefault.default),
+                            alt: "downarrow",
+                            className: "w-8 cursor-pointer"
+                        }, void 0, false, {
+                            fileName: "Swiggy Clone/src/components/Accordion.jsx",
+                            lineNumber: 23,
+                            columnNumber: 116
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "Swiggy Clone/src/components/Accordion.jsx",
+                        lineNumber: 23,
+                        columnNumber: 110
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "Swiggy Clone/src/components/Accordion.jsx",
+                lineNumber: 21,
+                columnNumber: 17
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "body",
+                className: `transition-all duration-500 ${showItems ? "opacity-100 scale-100" : "opacity-0 scale-75"}`,
+                children: showItems && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemJsx.Item), {
+                    item: categoryData.itemCards
+                }, void 0, false, {
+                    fileName: "Swiggy Clone/src/components/Accordion.jsx",
+                    lineNumber: 28,
+                    columnNumber: 35
+                }, undefined)
+            }, void 0, false, {
+                fileName: "Swiggy Clone/src/components/Accordion.jsx",
+                lineNumber: 26,
+                columnNumber: 17
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "Swiggy Clone/src/components/Accordion.jsx",
+        lineNumber: 19,
+        columnNumber: 14
+    }, undefined);
+};
+_c = Accordion;
+var _c;
+$RefreshReg$(_c, "Accordion");
+
+  $parcel$ReactRefreshHelpers$e935.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utils/img/down.png":"lmAwx","../utils/img/up.png":"i1vRG","./Item.jsx":"5J0zu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lmAwx":[function(require,module,exports,__globalThis) {
+module.exports = require("dff3ee28b65bb092").getBundleURL('81eGo') + "down.c9394048.png" + "?" + Date.now();
+
+},{"dff3ee28b65bb092":"lgJ39"}],"i1vRG":[function(require,module,exports,__globalThis) {
+module.exports = require("2b967c5cec59bb5e").getBundleURL('81eGo') + "up.8a91f046.png" + "?" + Date.now();
+
+},{"2b967c5cec59bb5e":"lgJ39"}],"5J0zu":[function(require,module,exports,__globalThis) {
+var $parcel$ReactRefreshHelpers$50ea = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$50ea.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Item", ()=>Item);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _constants = require("../utils/constants");
+const Item = (props)=>{
+    const { item } = props;
+    // console.log(item)
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "grid gap-4",
+        children: item.map((menu)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: " mb-4 px-3 pt-3 pb-8 flex gap-4 justify-between shadow-lg rounded-lg",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex flex-col gap-2 ",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "font-semibold text-md",
+                                children: menu.card.info.name
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/Item.jsx",
+                                lineNumber: 10,
+                                columnNumber: 25
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "font-semibold",
+                                children: [
+                                    "\u20B9",
+                                    menu.card.info.price / 100 ? menu.card.info.price / 100 : menu.card.info.defaultPrice / 100
+                                ]
+                            }, void 0, true, {
+                                fileName: "Swiggy Clone/src/components/Item.jsx",
+                                lineNumber: 11,
+                                columnNumber: 25
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                children: [
+                                    menu.card.info.ratings.aggregatedRating.rating,
+                                    menu.card.info.ratings.aggregatedRating.ratingCountV2 ? `(${menu.card.info.ratings.aggregatedRating.ratingCountV2})` : ""
+                                ]
+                            }, void 0, true, {
+                                fileName: "Swiggy Clone/src/components/Item.jsx",
+                                lineNumber: 13,
+                                columnNumber: 25
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "line-clamp-2",
+                                children: menu.card.info.description
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/Item.jsx",
+                                lineNumber: 18,
+                                columnNumber: 25
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Swiggy Clone/src/components/Item.jsx",
+                        lineNumber: 9,
+                        columnNumber: 21
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "rounded-lg w-32 h-32 flex  flex-shrink-0 relative",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "absolute z-10 top-24 left-4",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    className: "bg-white px-8 py-2 shadow-lg rounded-lg text-green-600 font-bold",
+                                    children: "ADD"
+                                }, void 0, false, {
+                                    fileName: "Swiggy Clone/src/components/Item.jsx",
+                                    lineNumber: 22,
+                                    columnNumber: 29
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/Item.jsx",
+                                lineNumber: 21,
+                                columnNumber: 25
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: (0, _constants.MENU_ITEM_URL) + menu.card.info.imageId,
+                                alt: "",
+                                className: " w-full rounded-lg flex-shrink-0"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/Item.jsx",
+                                lineNumber: 24,
+                                columnNumber: 25
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Swiggy Clone/src/components/Item.jsx",
+                        lineNumber: 20,
+                        columnNumber: 21
+                    }, undefined)
+                ]
+            }, menu.card.info.id, true, {
+                fileName: "Swiggy Clone/src/components/Item.jsx",
+                lineNumber: 8,
+                columnNumber: 17
+            }, undefined))
+    }, void 0, false, {
+        fileName: "Swiggy Clone/src/components/Item.jsx",
+        lineNumber: 6,
+        columnNumber: 9
+    }, undefined);
+};
+_c = Item;
+var _c;
+$RefreshReg$(_c, "Item");
+
+  $parcel$ReactRefreshHelpers$50ea.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../utils/constants":"lrd1H","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1uGw5":[function(require,module,exports,__globalThis) {
 module.exports = require("5f4cb0d6226ed913")(require("9afaed3d69c89a49").getBundleURL('81eGo') + "Grocery.b6a5cf2a.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;

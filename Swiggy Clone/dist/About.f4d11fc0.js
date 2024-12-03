@@ -818,7 +818,7 @@ class UserClass extends (0, _reactDefault.default).Component {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/img/html.png":"gkCEl","../utils/img/css.png":"lPNg4","../utils/img/js.png":"axrCV","../utils/img/react.png":"54DGK","../utils/img/redux.png":"a9JlQ","../utils/img/git.png":"7dedd"}],"gkCEl":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utils/img/html.png":"gkCEl","../utils/img/css.png":"lPNg4","../utils/img/js.png":"axrCV","../utils/img/react.png":"54DGK","../utils/img/redux.png":"a9JlQ","../utils/img/git.png":"7dedd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkCEl":[function(require,module,exports,__globalThis) {
 module.exports = require("622cda2b2dca9d0").getBundleURL('6j7Fh') + "html.293f0424.png" + "?" + Date.now();
 
 },{"622cda2b2dca9d0":"lgJ39"}],"lPNg4":[function(require,module,exports,__globalThis) {

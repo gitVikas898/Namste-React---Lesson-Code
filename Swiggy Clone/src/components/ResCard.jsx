@@ -2,7 +2,7 @@ import { CDN_URL, RATING_URL } from "../utils/constants.js";
 export const ResCard = (props) => {
     const { resData } = props;
     return (
-      <div id="card" className=" cursor-pointer rounded-md p-4  h-96 flex flex-col justify-between hover:scale-105 transition-transform ease-in duration-300  ">
+      <div id="card" className=" cursor-pointer rounded-md p-4  h-96 flex flex-col justify-between hover:shadow-lg hover:scale-105  transition-transform   ease-in duration-300  ">
         
         <div className=" rounded-md  h-52 flex">
           <img
@@ -26,3 +26,15 @@ export const ResCard = (props) => {
       </div>
     );
   };
+
+
+  export const withLabelVeg = (ResCard)=>{
+    return(props)=>{
+      return(
+        <div>
+          <label className="px-4 bg-green-500 text-white absolute m-2 rounded-md z-10">Veg</label>
+          <ResCard {...props}></ResCard>
+        </div>
+      )
+    }
+  }
