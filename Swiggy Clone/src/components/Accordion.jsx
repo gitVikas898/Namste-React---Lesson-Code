@@ -12,8 +12,6 @@ export const Accordion = (props)=>{
        setShowIndex(showItems ? null : categoryData.id);
     } 
     const {categoryData,showItems,setShowIndex} = props;
-
-    console.log(categoryData)
     return(
        
              <div className="border-y-[12px] boder-solid border-gray-100 rounded-lg grid gap-2 w-1/2">

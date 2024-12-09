@@ -25,7 +25,7 @@ export const BodyComponent = () => {
       const restaurantInfo = restaurants.map(restaurant => restaurant.info);
       setList(restaurantInfo);
       setFilteredRestaurant(restaurantInfo);
-      console.log(response)
+
   }
 
   let [searchText , setSearchText] = useState("");
@@ -70,7 +70,11 @@ export const BodyComponent = () => {
             setSearchText(e.target.value);
           }}></input>
           <button className="bg-orange-500 p-4 text-white rounded-r-full" onClick={()=>{
-            const searcResult = listOfRestaurant.filter((res)=> res.name.includes(searchText));
+          const trimmedSearchText = searchText.trim().toLowerCase();
+        const searcResult = listOfRestaurant.filter(
+            (res) => res.name && res.name.toLowerCase().includes(trimmedSearchText)
+        );
+        setFilteredRestaurant(searcResult);
            setFilteredRestaurant(searcResult);
           }}>Search</button>
         </div>

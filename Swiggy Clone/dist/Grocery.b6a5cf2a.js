@@ -618,9 +618,65 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Grocery = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "Grocery Page"
-        }, void 0, false, {
+        className: "min-h-screen",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "flex flex-col gap-4 p-2",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "text-2xl font-semibold font-mono",
+                    children: "We will  arrive soon till then join our Newsletter for updates!"
+                }, void 0, false, {
+                    fileName: "Swiggy Clone/src/components/Grocery.jsx",
+                    lineNumber: 5,
+                    columnNumber: 17
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                    action: "#",
+                    className: " p-3 ",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex gap-4 items-center justify-start",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                htmlFor: "email",
+                                className: "text-slate-800 font-mono text-xl",
+                                children: "Email : "
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/Grocery.jsx",
+                                lineNumber: 8,
+                                columnNumber: 25
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "email",
+                                id: "email",
+                                className: "w-1/3 border border-gray-200 border-solid p-3 rounded-lg outline-none",
+                                placeholder: "Enter email"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/Grocery.jsx",
+                                lineNumber: 9,
+                                columnNumber: 25
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                type: "#",
+                                className: "bg-violet-600 px-4 py-3 w-1/6 text-white ",
+                                children: "Subscribe"
+                            }, void 0, false, {
+                                fileName: "Swiggy Clone/src/components/Grocery.jsx",
+                                lineNumber: 10,
+                                columnNumber: 25
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Swiggy Clone/src/components/Grocery.jsx",
+                        lineNumber: 7,
+                        columnNumber: 21
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "Swiggy Clone/src/components/Grocery.jsx",
+                    lineNumber: 6,
+                    columnNumber: 17
+                }, undefined)
+            ]
+        }, void 0, true, {
             fileName: "Swiggy Clone/src/components/Grocery.jsx",
             lineNumber: 4,
             columnNumber: 13

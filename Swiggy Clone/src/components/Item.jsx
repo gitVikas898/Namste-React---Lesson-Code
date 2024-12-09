@@ -1,5 +1,15 @@
+import { useDispatch } from "react-redux";
 import { MENU_ITEM_URL } from "../utils/constants";
+import { addItem } from "../utils/cartSlice";
+
 export const Item = (props)=>{
+
+    const dispatch = useDispatch();
+
+    const handleAdd = (menu)=>{
+        dispatch(addItem(menu));
+    }
+
     const {item} = props
     // console.log(item)
     return(
@@ -19,7 +29,7 @@ export const Item = (props)=>{
                     </div>
                     <div className="rounded-lg w-32 h-32 flex  flex-shrink-0 relative">
                         <div className="absolute z-10 top-24 left-4">
-                            <button className="bg-white px-8 py-2 shadow-lg rounded-lg text-green-600 font-bold">ADD</button>
+                            <button className="bg-white px-8 py-2 shadow-lg rounded-lg text-green-600 font-bold" onClick={()=>handleAdd(menu)}>ADD</button>
                         </div>
                         <img src={MENU_ITEM_URL+menu.card.info.imageId} alt="" className=" w-full rounded-lg flex-shrink-0"/>
                     </div>
