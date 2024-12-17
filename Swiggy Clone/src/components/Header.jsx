@@ -1,7 +1,7 @@
 import { useState,useContext } from "react";
 import { Link } from "react-router-dom";
 import { useOnlineStatus } from "../utils/useOnlineStatus.js";
-import logo from "../utils/img/logo.png"
+// import logo from "../utils/img/logo.png"
 import UserContext from "../utils/UserContext.js";
 import { useSelector } from "react-redux";
 
@@ -10,7 +10,13 @@ export const Header = () => {
 
   const status = useOnlineStatus()
 
-  let [btnName ,setbtn] = useState(["Login"]);
+  let [btnName ,setBtn] = useState(["Login"]);
+
+
+  const handleButtonClick = () => {
+    setBtn((prevName) => (prevName === "Login" ? "Logout" : "Login"));
+  };
+
 
   const {loggedInUser} = useContext(UserContext);
 
@@ -23,7 +29,7 @@ export const Header = () => {
       <div className=" z-10 items-center p-2 flex justify-between shadow-md w-full">
         <div className="max-w-24 ">
           <img
-            src={logo}
+            // src={logo}
             className="flex"
           ></img>
         </div>
@@ -47,9 +53,7 @@ export const Header = () => {
               <Link to="/cart"   className="bg-orange-400 px-4 py-2 rounded text-white">Cart:({cartItems.length}) </Link>
             </li>
             <li>
-              <button className="bg-orange-400 px-4 py-2 rounded text-white" onClick={()=>{
-              btnName === "Login" ? setbtn("Logout") : setbtn("Login");
-            }} >{btnName}
+              <button className="bg-orange-400 px-4 py-2 rounded text-white" onClick={handleButtonClick} >{btnName}
             </button>
             </li>
 
